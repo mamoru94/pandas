@@ -66,10 +66,10 @@ word = input("Введите слово: ").upper()  # переводим все
 scores = 0
 
 if word[0] in eng_scores:  # проверяем, является ли первая буква английской
-    for letter in word:
-        scores += eng_scores[letter]
+    for letter in word: #перебираем каждую букву слова
+        scores += eng_scores[letter]#складываем значение по этой букве из словаря
 else:  # если первая буква не английская, то считаем, что это русское слово
-    for letter in word:
-        scores += rus_scores[letter]
+    for letter in word:#перебираем каждую букву слова
+        scores += rus_scores[letter]#складываем значение по этой букве из словаря
 
 print("Стоимость слова", word, ":", scores)
